@@ -1,0 +1,52 @@
+
+html {
+    height: 100%;
+}
+header {
+    color: tomato;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    min-height: 100%;
+}
+#seccion_madre > * {
+box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+border-radius: 4px;
+padding: 10px;
+text-align: center;
+}
+#seccion_madre {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto ;/*tamaño de columnas*/
+    grid-template-rows: auto;/*tamaño de filas*/
+    grid-template-areas: 
+    "seccion1"
+    "seccion2";
+}
+#seccion1 {
+    grid-area: seccion1;
+    background-color: beige;
+}
+#seccion2 {
+    grid-area: seccion2;
+    background-color: bisque;
+}
+@media (min-width: 600px){
+    #seccion_madre {
+        display: grid;
+        gap: 10px;
+        grid-template: /*manera elegante de setear orden y tamaño de areas*/
+        "seccion1 seccion2" 200px /
+        auto         auto ;
+}
+h4 {
+    color: rgb(79, 79, 243);
+}
+h3 {
+    color: brown;
+}
