@@ -1,52 +1,50 @@
-
 html {
     height: 100%;
 }
-header {
-    color: tomato;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-}
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    min-height: 100%;
+    min-width: 100%;
 }
-#seccion_madre > * {
-box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-border-radius: 4px;
-padding: 10px;
-text-align: center;
+#navegador > *{
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
 }
-#seccion_madre {
+#navegador {
     display: grid;
     gap: 10px;
-    grid-template-columns: auto ;/*tamaño de columnas*/
-    grid-template-rows: auto;/*tamaño de filas*/
+    grid-template-columns: auto auto auto auto;/*tamaño de columnas*/
+    grid-template-rows: auto auto;/*tamaño de filas*/
     grid-template-areas: 
-    "seccion1"
-    "seccion2";
+    "familia familia familia familia"
+    "historia arte vision mision";
 }
-#seccion1 {
-    grid-area: seccion1;
+#familia {
+    grid-area: familia;
     background-color: beige;
 }
-#seccion2 {
-    grid-area: seccion2;
+#historia {
+    grid-area: historia;
     background-color: bisque;
 }
+#arte {
+    grid-area: arte;
+    background-color: beige;
+}
+#vision {
+    grid-area: vision;
+    background-color: bisque;
+}
+#mision {
+    grid-area: mision;
+    background-color: beige;
+}
 @media (min-width: 600px){
-    #seccion_madre {
+    #navegador {
         display: grid;
         gap: 10px;
         grid-template: /*manera elegante de setear orden y tamaño de areas*/
-        "seccion1 seccion2" 200px /
-        auto         auto ;
-}
-h4 {
-    color: rgb(79, 79, 243);
-}
-h3 {
-    color: brown;
+        "familia familia familia familia" 200px
+        "historia arte    vision  mision" 200px /
+        auto      auto    auto     auto ;
 }
